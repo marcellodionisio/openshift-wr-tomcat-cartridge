@@ -24,7 +24,7 @@ Provides:
 - diy-0.1
 - diy
 Publishes: 
-Source-Url: https://codeload.github.com/marcellodionisiowr/openshift-wr-tomcat-cartridge/zip/master
+Source-Url: https://codeload.github.com/marcellodionisiowr/openshift-wr-tomcat-cartridge/zip/master.zip
 Subscribes:
   set-env:
     Type: ENV:*
