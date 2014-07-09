@@ -9,13 +9,14 @@ esac
 
 # Create additional directories required by the diy cartridge
 mkdir -p ${OPENSHIFT_WEBRATIO_DIR}run
-cd $OPENSHIFT_DATA_DIR
+cd $OPENSHIFT_REPO_DIR
 
-echo "installing tomcat"
+client_result "installing tomcat"
 wget http://apache.fastbull.org/tomcat/tomcat-7/v7.0.54/bin/apache-tomcat-7.0.54.tar.gz
 tar -xzf apache-tomcat-7.0.54.tar.gz
 rm -rf apache-tomcat-7.0.54.tar.gz
-
+cd apache-tomcat-7.0.54/conf
+rm -rf server.xml
 echo "tomcat succesfully installed"
 
 client_result "Disclaimer: This is an experimental cartridge that provides a way to try unsupported languages, frameworks, and middleware on OpenShift."
