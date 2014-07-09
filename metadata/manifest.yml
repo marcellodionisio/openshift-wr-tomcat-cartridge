@@ -24,7 +24,7 @@ Provides:
 - diy-0.1
 - diy
 Publishes: 
-Source-Url:https://github.com/marcellodionisiowr/openshift-wr-tomcat-cartridge
+Source-Url: https://github.com/marcellodionisiowr/openshift-wr-tomcat-cartridge
 Subscribes:
   set-env:
     Type: ENV:*
