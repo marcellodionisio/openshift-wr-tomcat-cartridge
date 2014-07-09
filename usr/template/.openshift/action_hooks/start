@@ -10,4 +10,4 @@ cd $OPENSHIFT_DATA_DIR/tomcat
 sed -ig 's/OPENSHIFT_DIY_IP/'$OPENSHIFT_DIY_IP'/g' conf/server.xml
 sed -ig 's/OPENSHIFT_APP_DNS/'$OPENSHIFT_APP_DNS'/' conf/server.xml
 bin/startup.sh
-echo "tomcat started"
+client_result "tomcat started"
