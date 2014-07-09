@@ -121,7 +121,7 @@
                resourceName="UserDatabase"/>
       </Realm>
 
-      <Host name="OPENSHIFT_APP_DNS"  appBase="webapps"
+      <Host name="<%= ENV['OPENSHIFT_APP_DNS'] %>"  appBase="webapps"
             unpackWARs="true" autoDeploy="true">
 
         <!-- SingleSignOn valve, share authentication between web applications
