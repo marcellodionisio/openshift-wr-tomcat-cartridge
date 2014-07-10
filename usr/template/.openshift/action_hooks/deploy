@@ -7,5 +7,7 @@ set -x
 #if [ -a $OPENSHIFT_REPO_DIRdiy/server.xml ]
 #then
 	echo "starting tomcat"
-    mv -f $OPENSHIFT_REPO_DIRdiy/server.xml $OPENSHIFT_DATA_DIRtomcat/conf
+	cd $OPENSHIFT_REPO_DIR
+	cd diy
+    mv -f server.xml $OPENSHIFT_DATA_DIRtomcat/conf
 #fi
