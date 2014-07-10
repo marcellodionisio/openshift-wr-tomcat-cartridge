@@ -16,7 +16,3 @@ echo "work directory removed"
 cd ${OPENSHIFT_DATA_DIR}/tomcat
 rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/diy/webapps/ ${OPENSHIFT_DATA_DIR}/tomcat/webapps/
 echo "webapps folder copied"
-echo "starting application server"
-cd ${OPENSHIFT_DATA_DIR}tomcat/bin
-sh startup.sh
-echo "application server started"
