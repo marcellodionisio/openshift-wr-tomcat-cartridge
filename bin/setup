@@ -10,12 +10,12 @@ esac
 # Create additional directories required by the diy cartridge
 mkdir -p ${OPENSHIFT_WEBRATIO_DIR}run
 cd $OPENSHIFT_DATA_DIR
-
 client_result "installing tomcat"
 wget http://apache.fastbull.org/tomcat/tomcat-7/v7.0.54/bin/apache-tomcat-7.0.54.tar.gz
 tar -xzf apache-tomcat-7.0.54.tar.gz
 rm -rf apache-tomcat-7.0.54.tar.gz
 mv apache-tomcat-7.0.54 tomcat
+chmod 775 tomcat
 cd tomcat/conf
 rm -rf server.xml
 cd ${OPENSHIFT_DATA_DIR}tomcat/bin
