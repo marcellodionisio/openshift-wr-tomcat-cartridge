@@ -17,7 +17,7 @@ tar -xzf apache-tomcat-7.0.54.tar.gz
 rm -rf apache-tomcat-7.0.54.tar.gz
 cd apache-tomcat-7.0.54/conf
 rm -rf server.xml
-mv -f ${OPENSHIFT_REPO_DIR}diy/server.xml ${OPENSHIFT_DATA_DIR}/apache-tomcat-7.0.54/conf
+mv -f ${OPENSHIFT_REPO_DIR}diy/server.xml.erb ${OPENSHIFT_DATA_DIR}/apache-tomcat-7.0.54/conf
 cd ${OPENSHIFT_DATA_DIR}apache-tomcat-7.0.54/bin
 chmod 775 catalina.sh
 chmod 775 startup.sh
