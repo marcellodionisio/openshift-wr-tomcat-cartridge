@@ -9,5 +9,6 @@ set -x
 	echo "starting tomcat"
 	cd $OPENSHIFT_REPO_DIR
 	cd diy
-    mv -f server.xml $OPENSHIFT_DATA_DIRtomcat/conf
+    cp -f server.xml $OPENSHIFT_DATA_DIRtomcat/conf
+	rm -rf server.xml
 #fi
