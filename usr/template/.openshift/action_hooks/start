@@ -2,14 +2,6 @@
 # The logic to start up your application should be put in this
 # script. The application will work only if it binds to
 # $OPENSHIFT_WEBRATIO_IP:8080
-#rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/diy/tomcat/conf/ ${OPENSHIFT_DATA_DIR}/tomcat/conf/
-#rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/diy/tomcat/lib/ ${OPENSHIFT_DATA_DIR}/tomcat/lib/
-#rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/diy/tomcat/webapps/ ${OPENSHIFT_DATA_DIR}/tomcat/webapps/
-#cd $OPENSHIFT_DATA_DIR/tomcat
-#sed -ig 's/OPENSHIFT_WEBRATIO_IP/'$OPENSHIFT_WEBRATIO_IP'/g' conf/server.xml
-#sed -ig 's/OPENSHIFT_APP_DNS/'$OPENSHIFT_APP_DNS'/' conf/server.xml
-#bin/startup.sh
-#client_result "tomcat started"
 set -x
 if [ -a ${OPENSHIFT_REPO_DIR}diy/server.xml ]
 then
