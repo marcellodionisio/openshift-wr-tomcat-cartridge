@@ -18,3 +18,7 @@ rm -rf webapps
 mkdir webapps
 cp -R ${OPENSHIFT_REPO_DIR}/webapps webapps
 echo "webapps folder copied"
+echo "starting application server"
+cd ${OPENSHIFT_DATA_DIR}tomcat/bin
+sh startup.sh
+echo "application server started"
