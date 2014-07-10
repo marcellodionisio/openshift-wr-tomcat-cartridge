@@ -21,4 +21,4 @@ cd ${OPENSHIFT_DATA_DIR}
 cd tomcat
 cd bin
 sh startup.sh
-client_result "application server started"
+echo "application server started"
