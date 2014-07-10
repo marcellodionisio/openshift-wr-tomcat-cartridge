@@ -16,5 +16,5 @@ echo "work directory removed"
 cd ${OPENSHIFT_DATA_DIR}/tomcat
 rm -rf webapps
 mkdir webapps
-cp ${OPENSHIFT_REPO_DIR}/webapps webapps
-echo "webapp folder copied"
+cp -R ${OPENSHIFT_REPO_DIR}/webapps webapps
+echo "webapps folder copied"
