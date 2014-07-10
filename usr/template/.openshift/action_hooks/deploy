@@ -4,9 +4,9 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 set -x
-if [ -a ${OPENSHIFT_REPO_DIR}diy/server.xml ]
+if [ -a ${OPENSHIFT_REPO_DIR}wr/server.xml ]
 then
-	cd ${OPENSHIFT_REPO_DIR}diy
+	cd ${OPENSHIFT_REPO_DIR}wr
 	mv server.xml ${OPENSHIFT_DATA_DIR}tomcat/conf
 fi
 echo "starting tomcat"
@@ -14,5 +14,5 @@ echo "removing work directory"
 rm -rf ${OPENSHIFT_DATA_DIR}/tomcat/work
 echo "work directory removed"
 cd ${OPENSHIFT_DATA_DIR}/tomcat
-rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/diy/webapps/ ${OPENSHIFT_DATA_DIR}/tomcat/webapps/
+rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/wr/webapps/ ${OPENSHIFT_DATA_DIR}/tomcat/webapps/
 echo "webapps folder copied"
