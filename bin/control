@@ -21,6 +21,11 @@ function stop() {
     run_hook stop
 }
 
+function deploy() {
+	echo "Deploying application"
+	run_hook deploy
+}
+
 function restart() {
     stop
     start
@@ -53,5 +58,6 @@ case "$1" in
   status)    status ;;
   reload)    reload ;;
   tidy)      tidy ;;
+  deploy)	 deploy ;;
   *)         exit 0
 esac
