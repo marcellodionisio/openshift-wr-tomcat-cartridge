@@ -4,9 +4,17 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 set -x
-#if [ -a ${OPENSHIFT_REPO_DIR}diy/server.xml ]
-#then
-echo "starting tomcat"
-cd ${OPENSHIFT_REPO_DIR}diy
-mv server.xml ${OPENSHIFT_DATA_DIR}tomcat/conf
-#fi
+if [ -a ${OPENSHIFT_REPO_DIR}diy/server.xml ]
+then
+	echo "starting tomcat"
+	cd ${OPENSHIFT_REPO_DIR}diy
+	mv server.xml ${OPENSHIFT_DATA_DIR}tomcat/conf
+fi
+"removing work directory"
+rm -rf ${OPENSHIFT_DATA_DIR}/tomcat/work
+echo "work directory removed"
+cd ${OPENSHIFT_DATA_DIR}/tomcat
+rm -rf webapps
+mkdir webapps
+cp ${OPENSHIFT_REPO_DIR}/webapps webapps
+echo "webapp folder copied"
