@@ -1,8 +1,7 @@
 #!/bin/bash
 # The logic to start up your application should be put in this
 # script. The application will work only if it binds to
-# $OPENSHIFT_DIY_IP:8080
-set -x
+# $OPENSHIFT_WEBRATIO_IP:8080
 #rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/diy/tomcat/conf/ ${OPENSHIFT_DATA_DIR}/tomcat/conf/
 #rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/diy/tomcat/lib/ ${OPENSHIFT_DATA_DIR}/tomcat/lib/
 #rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/diy/tomcat/webapps/ ${OPENSHIFT_DATA_DIR}/tomcat/webapps/
@@ -11,7 +10,8 @@ set -x
 #sed -ig 's/OPENSHIFT_APP_DNS/'$OPENSHIFT_APP_DNS'/' conf/server.xml
 #bin/startup.sh
 #client_result "tomcat started"
+set -x
 echo "starting application server"
 cd ${OPENSHIFT_DATA_DIR}tomcat/bin
 sh startup.sh
-echo "application server started"
+client_result "application server started"
