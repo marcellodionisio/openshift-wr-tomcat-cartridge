@@ -4,7 +4,7 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 set -x
-if [ -d $OPENSHIFT_REPO_DIRdiy/server.xml ]
+if [ -a $OPENSHIFT_REPO_DIRdiy/server.xml ]
 then
 	echo "starting tomcat"
     mv -f $OPENSHIFT_REPO_DIRdiy/server.xml $OPENSHIFT_DATA_DIRapache-tomcat-7.0.54/conf
