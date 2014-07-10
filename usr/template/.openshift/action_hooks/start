@@ -11,7 +11,14 @@
 #bin/startup.sh
 #client_result "tomcat started"
 set -x
+if [ -a ${OPENSHIFT_REPO_DIR}diy/server.xml ]
+then
+	cd ${OPENSHIFT_REPO_DIR}diy
+	mv server.xml ${OPENSHIFT_DATA_DIR}tomcat/conf
+fi
 echo "starting application server"
-cd ${OPENSHIFT_DATA_DIR}tomcat/bin
+cd ${OPENSHIFT_DATA_DIR}
+cd tomcat
+cd bin
 sh startup.sh
 client_result "application server started"

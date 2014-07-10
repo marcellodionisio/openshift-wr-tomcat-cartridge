@@ -6,11 +6,11 @@
 set -x
 if [ -a ${OPENSHIFT_REPO_DIR}diy/server.xml ]
 then
-	echo "starting tomcat"
 	cd ${OPENSHIFT_REPO_DIR}diy
 	mv server.xml ${OPENSHIFT_DATA_DIR}tomcat/conf
 fi
-"removing work directory"
+echo "starting tomcat"
+echo "removing work directory"
 rm -rf ${OPENSHIFT_DATA_DIR}/tomcat/work
 echo "work directory removed"
 cd ${OPENSHIFT_DATA_DIR}/tomcat
